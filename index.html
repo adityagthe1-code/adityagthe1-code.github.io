@@ -1,13 +1,234 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#241b35">
-<title>The Arcade</title>
-<style>
-:root{--ink:#241b35;--paper:#f4efdf;--coral:#ed7653;--mint:#a9d0c0;--gold:#e8cc70;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper)}a{color:inherit}a:focus-visible{outline:3px solid var(--coral);outline-offset:4px}.skip{position:absolute;top:-4rem;left:1rem;padding:.75rem;background:var(--gold)}.skip:focus{top:1rem}header,main,footer{max-width:1120px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2rem}.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:-.04em;text-decoration:none}.mark{display:grid;place-items:center;width:2rem;aspect-ratio:1;border-radius:9px 9px 4px 4px;background:var(--coral);color:var(--paper)}nav a{font-size:.9rem;font-weight:700;text-underline-offset:.25em}main{padding:3rem 2rem 5rem}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5rem;min-height:500px}.intro{max-width:34rem}.kicker{display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:750}.kicker:before{content:"";width:.65rem;height:.65rem;border-radius:50%;background:var(--coral)}h1,h2{font-family:ui-rounded,"Arial Rounded MT Bold","Trebuchet MS",sans-serif;letter-spacing:-.07em}h1{margin:.8rem 0;font-size:clamp(3.2rem,7vw,6.3rem);line-height:.95}.lead{max-width:30rem;margin:1.5rem 0 2rem;color:#51475f;font-size:1.15rem;line-height:1.65}.button{display:inline-block;padding:.9rem 1.2rem;border:2px solid var(--ink);border-radius:7px;background:var(--ink);color:var(--paper);font-weight:800;text-decoration:none;box-shadow:4px 4px 0 var(--coral);transition:transform .14s,box-shadow .14s}.button:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--coral)}.cabinet-wrap{display:grid;place-items:center}.cabinet{width:min(100%,350px);padding:1rem;border:3px solid var(--ink);border-radius:20px 20px 12px 12px;background:var(--coral);box-shadow:12px 12px 0 var(--ink);transform:rotate(2deg)}.marquee{margin-bottom:.85rem;padding:.55rem;border:2px solid var(--ink);border-radius:7px;background:var(--gold);text-align:center;font-family:ui-rounded,"Arial Rounded MT Bold","Trebuchet MS",sans-serif;font-weight:900;letter-spacing:.08em}.screen{display:grid;min-height:250px;place-items:center;padding:1rem;border:3px solid var(--ink);border-radius:10px;background:var(--mint);text-align:center}.screen-inner{max-width:14rem}.star{margin-bottom:.6rem;color:var(--coral);font-size:4rem;line-height:1;text-shadow:3px 0 var(--ink),-3px 0 var(--ink),0 3px var(--ink),0 -3px var(--ink)}.screen h2{margin:0;font-size:1.55rem}.screen p{color:#3e4650;line-height:1.5}.controls{display:flex;justify-content:space-between;align-items:center;padding:1rem .3rem 0}.dpad{position:relative;width:64px;height:64px}.dpad:before,.dpad:after{position:absolute;content:"";border-radius:4px;background:var(--ink)}.dpad:before{left:22px;width:20px;height:64px}.dpad:after{top:22px;width:64px;height:20px}.buttons{display:flex;gap:.7rem;transform:rotate(-18deg)}.buttons i{width:24px;aspect-ratio:1;border:2px solid var(--ink);border-radius:50%;background:var(--gold)}.buttons i:last-child{margin-top:14px;background:var(--mint)}.shelf{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;margin-top:4rem;padding:1.5rem 0;border-top:1px solid #c9c2b6}.shelf h2{margin:0;font-size:clamp(1.5rem,3vw,2.1rem)}.shelf p{max-width:27rem;color:#51475f;line-height:1.6}footer{padding:1.3rem 2rem 2rem;border-top:1px solid #c9c2b6;color:#665d70;font-size:.85rem}@media(max-width:740px){header{padding:1.1rem 1.25rem}main{padding:2rem 1.25rem 3rem}.hero{grid-template-columns:1fr;gap:3rem;min-height:0}.cabinet{width:min(88%,350px)}.shelf{align-items:flex-start;flex-direction:column;gap:.65rem;margin-top:3rem}footer{padding-right:1.25rem;padding-left:1.25rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b1b45">
+  <meta name="description" content="A tiny indie arcade by adityagthe1-code. Take a shot in Nothing But Net.">
+  <title>Adityagthe1-code's Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --plum: #2b1b45;
+      --lavender: #e9e4f9;
+      --screen: #fff9ec;
+      --mint: #7de8db;
+      --orange: #fe7658;
+      --lemon: #f5d351;
+      --muted: #685d78;
+      --line: #2b1b4533;
+      --display: "Bowlby One", "Arial Black", Impact, sans-serif;
+      --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "DM Mono", ui-monospace, monospace;
+      font-family: var(--body);
+      color: var(--plum);
+      background: var(--lavender);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 8%, #ffffff8a 0 2px, transparent 3px) 0 0 / 26px 26px,
+        var(--lavender);
+      color: var(--plum);
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .skip-link { position: absolute; z-index: 10; top: -4rem; left: 1rem; padding: .8rem 1rem; border-radius: 8px; background: var(--lemon); font-weight: 800; }
+    .skip-link:focus { top: 1rem; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+    .identity { display: inline-flex; align-items: center; gap: .7rem; font-weight: 800; text-decoration: none; }
+    .identity-mark { display: grid; width: 2.25rem; aspect-ratio: 1; place-items: center; border: 2px solid var(--plum); border-radius: 9px 9px 5px 5px; background: var(--orange); box-shadow: 3px 3px 0 var(--plum); font-size: 1.2rem; }
+    .site-nav { display: flex; align-items: center; gap: 1.2rem; font-size: .9rem; font-weight: 700; }
+    .site-nav a { text-underline-offset: .25em; }
+    .site-nav .profile-link { display: inline-flex; align-items: center; min-height: 2.4rem; padding: .45rem .8rem; border: 2px solid var(--plum); border-radius: 999px; background: var(--screen); text-decoration: none; }
+    main { padding-bottom: 4rem; }
+    .welcome { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 2rem; padding: 1.3rem 0 1.6rem; }
+    .welcome-copy { max-width: 620px; }
+    .welcome-label { margin: 0 0 .65rem; color: var(--muted); font: 500 .78rem var(--mono); letter-spacing: .02em; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { font-family: var(--display); font-weight: 400; }
+    h1 { max-width: 690px; margin-bottom: .6rem; font-size: clamp(2.3rem, 5.8vw, 4.7rem); line-height: 1.02; letter-spacing: -.045em; }
+    .welcome-copy > p:last-child { margin-bottom: 0; }
+    .bio { max-width: 580px; margin-bottom: 0; color: #594e6b; font-size: 1.03rem; line-height: 1.55; }
+    .welcome-tag { justify-self: end; max-width: 230px; margin: 0 0 .2rem; padding: .75rem 1rem; border: 2px solid var(--plum); border-radius: 12px 12px 12px 3px; background: var(--mint); box-shadow: 4px 4px 0 var(--plum); font-weight: 800; line-height: 1.35; transform: rotate(1.5deg); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin: 1.2rem 0 .8rem; }
+    .section-heading h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.15rem); letter-spacing: -.035em; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .cabinet { overflow: hidden; border: 3px solid var(--plum); border-radius: 20px 20px 12px 12px; background: var(--screen); box-shadow: 9px 9px 0 var(--plum); }
+    .cabinet-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 49px; padding: .65rem 1rem; border-bottom: 3px solid var(--plum); background: var(--lemon); }
+    .cabinet-label { display: inline-flex; align-items: center; gap: .55rem; font-weight: 800; }
+    .cabinet-light { width: .7rem; aspect-ratio: 1; border: 1px solid var(--plum); border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 3px #2b1b4518; }
+    .cabinet-index { color: #584b25; font: 500 .72rem var(--mono); }
+    .cabinet-body { display: grid; grid-template-columns: minmax(270px, .92fr) minmax(350px, 1.08fr); gap: clamp(1.2rem, 3vw, 2rem); padding: clamp(1rem, 3vw, 1.8rem); }
+    .cover-frame { position: relative; align-self: start; overflow: hidden; border: 3px solid var(--plum); border-radius: 13px; background: var(--plum); box-shadow: 5px 5px 0 var(--orange); }
+    .cover-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1.28; object-fit: cover; }
+    .cover-sticker { position: absolute; right: .7rem; bottom: .7rem; padding: .4rem .65rem; border: 2px solid var(--plum); border-radius: 999px; background: var(--lemon); font: 500 .7rem var(--mono); }
+    .game-info { display: flex; flex-direction: column; min-width: 0; }
+    .game-kicker { margin: 0 0 .35rem; color: var(--muted); font: 500 .75rem var(--mono); }
+    .game-info h3 { margin: 0; font-family: var(--display); font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.12; letter-spacing: -.025em; }
+    .game-summary { max-width: 550px; margin: .65rem 0 1rem; color: #554b62; line-height: 1.58; }
+    .tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.1rem; }
+    .tag { padding: .34rem .63rem; border: 1px solid var(--plum); border-radius: 999px; background: #e9e4f9; font-size: .76rem; font-weight: 700; }
+    .preview { margin-top: auto; padding: .9rem; border: 2px solid var(--plum); border-radius: 11px; background: #f1edfc; }
+    .preview-top { display: flex; align-items: start; justify-content: space-between; gap: .7rem; }
+    .preview h4 { margin: 0 0 .3rem; font-size: .95rem; }
+    .preview-copy { margin: 0; color: #5f5570; font-size: .82rem; line-height: 1.45; }
+    .preview-button { flex: none; padding: .45rem .65rem; border: 2px solid var(--plum); border-radius: 7px; background: var(--mint); color: var(--plum); font: 700 .75rem var(--body); box-shadow: 2px 2px 0 var(--plum); cursor: pointer; }
+    .meter { position: relative; height: 20px; margin: .85rem 0 .55rem; overflow: hidden; border: 2px solid var(--plum); border-radius: 999px; background: #d4cde6; }
+    .meter-target { position: absolute; inset-block: 0; left: 43%; width: 19%; background: var(--mint); border-inline: 2px solid #18776e; }
+    .meter-needle { position: absolute; top: -2px; left: 53%; width: 4px; height: 20px; border: 1px solid var(--screen); border-radius: 3px; background: var(--orange); box-shadow: 0 0 0 1px var(--plum); }
+    .meter.is-running .meter-needle { animation: sweep 1.65s ease-in-out infinite alternate; }
+    @keyframes sweep { from { left: 5%; } to { left: 94%; } }
+    .meter-status { min-height: 1.1em; margin: 0; color: #584d68; font-size: .75rem; }
+    .play-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
+    .play-note { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .play-button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3.1rem; padding: .75rem 1rem; border: 2px solid var(--plum); border-radius: 8px; background: var(--orange); color: var(--plum); box-shadow: 4px 4px 0 var(--plum); font-weight: 800; text-decoration: none; transition: transform 120ms ease, box-shadow 120ms ease; }
+    .play-button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--plum); }
+    .play-button svg { width: 1rem; height: 1rem; }
+    .how-to { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .8rem; margin-top: 1.4rem; }
+    .tip { display: flex; align-items: center; gap: .75rem; padding: .8rem .9rem; border-top: 2px solid var(--plum); color: #514762; font-size: .85rem; line-height: 1.4; }
+    .tip-icon { display: grid; width: 2rem; flex: none; aspect-ratio: 1; place-items: center; border: 2px solid var(--plum); border-radius: 7px; background: var(--mint); font-weight: 900; }
+    .tip:nth-child(2) .tip-icon { background: var(--lemon); }
+    .tip:nth-child(3) .tip-icon { background: var(--orange); }
+    footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2rem 0 1.8rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    footer a { text-underline-offset: .2em; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 28px, 580px); }
+      .site-header { padding-block: 1rem; }
+      .site-nav { gap: .7rem; }
+      .site-nav a:not(.profile-link) { display: none; }
+      .welcome { grid-template-columns: 1fr; gap: .75rem; padding-top: .8rem; }
+      .welcome-tag { justify-self: start; max-width: none; margin-left: .25rem; }
+      h1 { font-size: clamp(2.4rem, 12vw, 4rem); }
+      .section-heading { align-items: start; flex-direction: column; }
+      .cabinet-body { grid-template-columns: 1fr; gap: 1.1rem; padding: .9rem; }
+      .cover-frame img { aspect-ratio: 1.55; }
+      .game-info h3 { font-size: 1.8rem; }
+      .how-to { grid-template-columns: 1fr; gap: .2rem; margin-top: 1.1rem; }
+      .tip { padding: .65rem .2rem; }
+      footer { flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .identity { gap: .55rem; font-size: .9rem; }
+      .identity-mark { width: 2rem; }
+      .site-nav .profile-link { padding-inline: .6rem; font-size: .78rem; }
+      .cabinet-head { padding-inline: .75rem; }
+      .cabinet-body { padding: .7rem; }
+      .preview { padding: .75rem; }
+      .preview-top { flex-direction: column; }
+      .play-row { align-items: stretch; flex-direction: column; }
+      .play-button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .meter.is-running .meter-needle { left: 53%; animation: none; }
+    }
+  </style>
 </head>
-<body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="#main"><span class="mark" aria-hidden="true">✦</span><span>The Arcade</span></a><nav aria-label="Main navigation"><a href="#cabinet">The cabinet</a></nav></header><main id="main"><section class="hero" aria-labelledby="welcome"><div class="intro"><p class="kicker">A little corner for play</p><h1 id="welcome">Make room for one more round.</h1><p class="lead">This is a home for the games you make, the ones you love, and the happy accidents in between.</p><a class="button" href="#cabinet">Step inside</a></div><div class="cabinet-wrap" aria-label="Illustration of an arcade cabinet"><div class="cabinet"><div class="marquee">THE ARCADE</div><div class="screen"><div class="screen-inner"><div class="star" aria-hidden="true">✦</div><h2>Ready when you are</h2><p>Your first game will find its place here.</p></div></div><div class="controls" aria-hidden="true"><div class="dpad"></div><div class="buttons"><i></i><i></i></div></div></div></div></section><section class="shelf" id="cabinet" aria-labelledby="shelf-title"><h2 id="shelf-title">The cabinet is yours.</h2><p>Add a game whenever you’re ready. This little arcade is just getting started.</p></section></main><footer>Built for curiosity, replay, and the joy of making things.</footer></body>
+<body>
+  <a class="skip-link" href="#main">Skip to the game</a>
+  <header class="site-header wrap">
+    <a class="identity" href="#top" aria-label="Adityagthe1-code's arcade home">
+      <span class="identity-mark" aria-hidden="true">✦</span>
+      <span>@adityagthe1-code</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#game">The game</a>
+      <a class="profile-link" href="https://github.com/adityagthe1-code" target="_blank" rel="noreferrer">GitHub profile</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="welcome" id="top" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="welcome-label">Welcome in, @adityagthe1-code</p>
+        <h1 id="welcome-title">Your next great streak starts here.</h1>
+        <!-- Edit this placeholder bio in index.html when you are ready. -->
+        <p class="bio">I make small games for curious people and friendly rivals.</p>
+      </div>
+      <p class="welcome-tag">One cabinet. One shot. How long can you stay hot?</p>
+    </section>
+
+    <section id="game" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <h2 id="gallery-title">Pick a cabinet</h2>
+        <p>One quick game. Endless chances to beat your streak.</p>
+      </div>
+      <article class="cabinet" aria-labelledby="game-title">
+        <div class="cabinet-head">
+          <span class="cabinet-label"><span class="cabinet-light" aria-hidden="true"></span> Featured cabinet</span>
+          <span class="cabinet-index">Ready to play</span>
+        </div>
+        <div class="cabinet-body">
+          <figure class="cover-frame">
+            <img src="./assets/nothing-but-net-cover.svg" alt="Illustrated basketball arcade cabinet with a hoop and a shot-timing meter">
+            <figcaption class="cover-sticker">A timing game</figcaption>
+          </figure>
+          <div class="game-info">
+            <p class="game-kicker">Basketball · Timing · Streaks</p>
+            <h3 id="game-title">Nothing But Net</h3>
+            <p class="game-summary">Read the moving shot meter and release inside the green window. Sink the shot to keep your streak alive; one miss ends the run.</p>
+            <div class="tags" aria-label="Game features">
+              <span class="tag">Choose a team</span>
+              <span class="tag">4 difficulty levels</span>
+              <span class="tag">Keyboard or click</span>
+            </div>
+            <section class="preview" aria-labelledby="preview-title">
+              <div class="preview-top">
+                <div>
+                  <h4 id="preview-title">Preview the shot meter</h4>
+                  <p class="preview-copy">Release when the marker crosses the mint window.</p>
+                </div>
+                <button class="preview-button" id="preview-toggle" type="button" aria-pressed="false">Run preview</button>
+              </div>
+              <div class="meter" id="meter" role="img" aria-label="Shot timing meter. The mint segment is the scoring window.">
+                <span class="meter-target" aria-hidden="true"></span>
+                <span class="meter-needle" id="meter-needle" aria-hidden="true"></span>
+              </div>
+              <p class="meter-status" id="meter-status" role="status" aria-live="polite">The marker is waiting in the scoring window.</p>
+            </section>
+            <div class="play-row">
+              <p class="play-note">Play opens the team and difficulty menu.</p>
+              <a class="play-button" href="./games/nothing-but-net/">
+                Play Nothing But Net
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="how-to" aria-label="How to play">
+        <div class="tip"><span class="tip-icon" aria-hidden="true">1</span><span>Pick your team and difficulty.</span></div>
+        <div class="tip"><span class="tip-icon" aria-hidden="true">2</span><span>Watch the meter travel across the court.</span></div>
+        <div class="tip"><span class="tip-icon" aria-hidden="true">3</span><span>Press Shoot or Space in the green window.</span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">
+    <span>A little arcade by <a href="https://github.com/adityagthe1-code">@adityagthe1-code</a>.</span>
+    <span>Take your time. Find your moment.</span>
+  </footer>
+  <script>
+    const meter = document.querySelector('#meter');
+    const toggle = document.querySelector('#preview-toggle');
+    const status = document.querySelector('#meter-status');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    toggle.addEventListener('click', () => {
+      const isRunning = meter.classList.toggle('is-running');
+      toggle.setAttribute('aria-pressed', String(isRunning));
+      toggle.textContent = isRunning ? 'Pause preview' : 'Run preview';
+      status.textContent = isRunning
+        ? (reducedMotion.matches ? 'Reduced motion is on; the marker stays in the scoring window.' : 'Watch for the mint window, then take your shot in the full game.')
+        : 'The marker is waiting in the scoring window.';
+    });
+  </script>
+</body>
 </html>

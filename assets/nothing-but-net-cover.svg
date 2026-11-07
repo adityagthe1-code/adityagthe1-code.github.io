@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Nothing But Net</title>
+  <desc id="desc">A hand-drawn arcade cabinet with a basketball, hoop, and timing meter.</desc>
+  <defs>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#2b1b45" opacity=".12"/>
+    </pattern>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7de8db"/>
+      <stop offset="1" stop-color="#d3f5e9"/>
+    </linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.5" height="1.5">
+      <feDropShadow dx="12" dy="16" stdDeviation="0" flood-color="#2b1b45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="#e9e4f9"/>
+  <rect width="1200" height="900" fill="url(#dots)"/>
+  <path d="M0 630 Q190 560 355 640T700 620T1200 600V900H0Z" fill="#c4b7f0"/>
+  <path d="M0 730 Q250 650 500 735T1000 710T1200 690V900H0Z" fill="#b5a7e7"/>
+  <g transform="rotate(-3 600 450)" filter="url(#shadow)">
+    <path d="M280 123 Q280 94 310 94H894L945 151V770Q945 798 916 798H305Q280 798 280 770Z" fill="#fe7658" stroke="#2b1b45" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M894 94L945 151H893Z" fill="#db5d48" stroke="#2b1b45" stroke-width="12" stroke-linejoin="round"/>
+    <rect x="326" y="134" width="558" height="110" rx="16" fill="#f5d351" stroke="#2b1b45" stroke-width="12"/>
+    <text x="605" y="202" text-anchor="middle" fill="#2b1b45" font-family="'Bowlby One', Impact, sans-serif" font-size="49" letter-spacing="1">NOTHING BUT NET</text>
+    <rect x="333" y="280" width="544" height="361" rx="24" fill="#2b1b45" stroke="#fff9ec" stroke-width="10"/>
+    <rect x="357" y="304" width="496" height="313" rx="12" fill="url(#sky)"/>
+    <circle cx="447" cy="391" r="54" fill="#f5d351"/>
+    <path d="M358 501Q485 430 602 514T853 480V617H358Z" fill="#5fbb9e"/>
+    <path d="M358 555Q470 512 580 558T853 540V617H358Z" fill="#fe7658"/>
+    <path d="M365 582Q594 562 845 590" stroke="#fff9ec" stroke-width="7" fill="none" opacity=".85"/>
+    <path d="M545 616Q605 520 661 616M472 616Q605 550 741 616" stroke="#fff9ec" stroke-width="5" fill="none" opacity=".8"/>
+    <rect x="665" y="366" width="104" height="67" rx="5" fill="#fff9ec" stroke="#2b1b45" stroke-width="9"/>
+    <path d="M684 433H762" stroke="#fe7658" stroke-width="14" stroke-linecap="round"/>
+    <path d="M690 443L699 481M711 443L715 486M736 443L730 486M757 443L747 481" stroke="#fff9ec" stroke-width="4"/>
+    <circle cx="610" cy="454" r="51" fill="#fe7658" stroke="#2b1b45" stroke-width="8"/>
+    <path d="M576 416Q613 453 578 493M644 416Q609 455 644 493M561 454H659M610 404V504" stroke="#2b1b45" stroke-width="6" fill="none"/>
+    <rect x="412" y="530" width="383" height="37" rx="18" fill="#fff9ec" stroke="#2b1b45" stroke-width="6"/>
+    <rect x="417" y="535" width="160" height="27" rx="13" fill="#c5b8eb"/>
+    <rect x="577" y="535" width="110" height="27" fill="#7de8db"/>
+    <rect x="687" y="535" width="103" height="27" rx="13" fill="#c5b8eb"/>
+    <path d="M632 526V571" stroke="#fe7658" stroke-width="10" stroke-linecap="round"/>
+    <text x="600" y="602" text-anchor="middle" fill="#2b1b45" font-family="'DM Mono', monospace" font-size="18" font-weight="700" letter-spacing="3">RELEASE IN THE GREEN</text>
+    <rect x="364" y="675" width="192" height="79" rx="15" fill="#fff9ec" stroke="#2b1b45" stroke-width="10"/>
+    <path d="M407 690V740M384 715H434" stroke="#2b1b45" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="692" cy="708" r="26" fill="#f5d351" stroke="#2b1b45" stroke-width="8"/>
+    <circle cx="760" cy="733" r="26" fill="#7de8db" stroke="#2b1b45" stroke-width="8"/>
+    <circle cx="845" cy="704" r="8" fill="#f5d351" stroke="#2b1b45" stroke-width="5"/>
+  </g>
+  <g transform="rotate(10 1040 235)">
+    <rect x="934" y="173" width="200" height="80" rx="14" fill="#f5d351" stroke="#2b1b45" stroke-width="8"/>
+    <text x="1034" y="225" text-anchor="middle" fill="#2b1b45" font-family="'Bowlby One', Impact, sans-serif" font-size="29">SINK IT!</text>
+  </g>
+  <path d="M125 182l18 42 43 4-33 28 10 43-38-22-38 22 10-43-33-28 43-4z" fill="#fe7658" stroke="#2b1b45" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="1074" cy="633" r="14" fill="#7de8db" stroke="#2b1b45" stroke-width="6"/>
+  <circle cx="1031" cy="680" r="8" fill="#f5d351" stroke="#2b1b45" stroke-width="5"/>
+</svg>
